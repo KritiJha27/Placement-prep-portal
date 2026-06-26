@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cyborg AI Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <canvas id="bgCanvas" aria-hidden="true"></canvas>
+  <div class="app-shell">
+    <header class="navglass reveal">
+      <div class="brand">
+        <span>CYBORG</span>AI
+      </div>
+      <nav>
+        <a href="#vision">Vision</a>
+        <a href="#galaxy">Galaxy</a>
+        <a href="#story">Story</a>
+        <a href="#features">Features</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="modeToggle" class="toggle-btn">Dark</button>
+      </div>
+    </header>
+
+    <section class="hero" id="vision">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">Cyberpunk AI Launch</span>
+        <h1><span id="typed" data-text="Build the ultimate cyborg experience for your next-gen startup."></span><span
+            class="cursor">|</span></h1>
+        <p>Neon interfaces, floating 3D robot effects, and AI-first motion designed for modern product launches.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Start a Demo</a>
+          <a href="#features" class="btn btn-secondary">See Features</a>
+        </div>
+        <div class="assistant-panel reveal">
+          <div class="assistant-header">
+            <span>Galaxy AI Assistant</span>
+            <button id="voiceToggle" class="btn btn-secondary">Voice Command</button>
+          </div>
+          <div class="assistant-body">
+            <div id="assistantTranscript" class="assistant-transcript">Speak or type a command to initialize the neural network.</div>
+            <div class="assistant-actions">
+              <input id="assistantInput" type="text" placeholder="Type 'launch AI' or 'scan eye'" />
+              <button id="assistantSend" class="btn btn-primary">Send</button>
+            </div>
+          </div>
+        </div>
+        <div class="stats-row reveal" id="stats">
+          <div class="stat">
+            <strong data-target="98">0</strong>
+            <span>AI accuracy</span>
+          </div>
+          <div class="stat">
+            <strong data-target="3.2">0</strong>
+            <span>response time (s)</span>
+          </div>
+          <div class="stat">
+            <strong data-target="120">0</strong>
+            <span>integrations</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="robot-holo">
+          <div class="robot-core"></div>
+          <div class="robot-ring ring-1"></div>
+          <div class="robot-ring ring-2"></div>
+          <div class="robot-ring ring-3"></div>
+          <img src="robot.png" alt="3D robot" class="robot-3d" />
+        </div>
+      </div>
+    </section>
+
+    <section class="eye-scanner-hub reveal" id="scanner">
+      <div class="login-hub">
+        <div class="login-title">Eye Scanner Biometric Entry</div>
+        <p class="scanner-description">Authenticate via retinal scan to unlock the neural network.</p>
+        <div class="scanner-frame">
+          <div class="scanner-bar"></div>
+        </div>
+        <button id="scanEyeBtn" class="btn btn-primary">Initiate Scan</button>
+        <div id="scanStatus" class="scan-status">Awaiting biometric activation…</div>
+      </div>
+    </section>
+
+    <section class="galaxy reveal" id="galaxy">
+      <div class="section-header">
+        <span>Particle Galaxy</span>
+        <h2>Interact with a living holographic cosmos.</h2>
+      </div>
+      <p class="galaxy-copy">Move your mouse, click for bursts, and scroll to shape sound-driven particle motion across the cybernetic sky.</p>
+      <div class="galaxy-grid">
+        <article class="holo-card reveal">
+          <h3>Mouse Motion</h3>
+          <p>Particles flow toward your cursor and shimmer as the scene responds in real time.</p>
+        </article>
+        <article class="holo-card reveal">
+          <h3>Click Bursts</h3>
+          <p>Every click ignites a glowing stardust explosion with a satisfying pulse.</p>
+        </article>
+        <article class="holo-card reveal">
+          <h3>Scroll Music</h3>
+          <p>Scroll to sweep the soundscape and alter particle tempo for an immersive rhythm.</p>
+        </article>
+      </div>
+      <button id="audioActivate" class="btn btn-secondary">Activate Music</button>
+      <div class="prediction-panel reveal">
+        <h3>Galaxy AI Predictions</h3>
+        <p id="predictionText">Hover or click the galaxy to reveal the next startup prediction.</p>
+      </div>
+    </section>
+
+    <section class="storyline reveal" id="story">
+      <div class="section-header">
+        <span>Launch Sequence</span>
+        <h2>Scroll to wake the system and launch the neural network.</h2>
+      </div>
+      <div class="story-grid">
+        <article class="story-step reveal" data-step="1">
+          <span>01</span>
+          <h3>Robot Wakes</h3>
+          <p>The core hums alive as the system senses motion and focus.</p>
+        </article>
+        <article class="story-step reveal" data-step="2">
+          <span>02</span>
+          <h3>AI Initializes</h3>
+          <p>Neural arrays boot up and begin interpreting the cybernetic environment.</p>
+        </article>
+        <article class="story-step reveal" data-step="3">
+          <span>03</span>
+          <h3>Network Activates</h3>
+          <p>Predictive layers engage, analyzing trends and generating insight streams.</p>
+        </article>
+        <article class="story-step reveal" data-step="4">
+          <span>04</span>
+          <h3>System Launches</h3>
+          <p>The launch protocol fires and the holographic mission begins.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="glass-grid" id="features">
+      <article class="glass-card reveal">
+        <h3>Neon Intelligence</h3>
+        <p>Adaptive AI pipelines with real-time data orchestration and holographic analytics.</p>
+      </article>
+      <article class="glass-card reveal">
+        <h3>Generative UX</h3>
+        <p>Smart UI patterns generated from user intent and predictive behavior.</p>
+      </article>
+      <article class="glass-card reveal">
+        <h3>Autonomous Ops</h3>
+        <p>Self-healing deployment workflows and live edge monitoring for AI systems.</p>
+      </article>
+      <article class="glass-card reveal">
+        <h3>Explainable AI</h3>
+        <p>Transparent decision traces and model insights for business teams.</p>
+      </article>
+    </section>
+
+    <section class="analytics" id="analytics">
+      <div class="section-header reveal">
+        <span>AI analytics in motion</span>
+        <h2>From raw signals to startup-ready product insights.</h2>
+      </div>
+      <div class="analytics-grid">
+        <div class="analytics-card reveal">
+          <h3>Forecasting</h3>
+          <p>Predict product velocity and market fit with live simulation decks.</p>
+        </div>
+        <div class="analytics-card reveal">
+          <h3>Performance</h3>
+          <p>Auto-tuned benchmarks and system health overlays keep launch timing precise.</p>
+        </div>
+        <div class="analytics-card reveal">
+          <h3>Signal Fusion</h3>
+          <p>Blend behavioral, operational, and product data into one executive console.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+      <div class="section-header reveal">
+        <span>Trusted by AI leaders</span>
+        <h2>Startup teams love the cyborg build experience.</h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p>“The neon design and AI workflow made our launch feel futuristic and fast.”</p>
+          <strong>Rhea K.</strong>
+          <span>Founder, NeonLabs</span>
+        </div>
+        <div class="testimonial-card">
+          <p>“The robot hologram motion makes every page feel alive — best startup marketing ever.”</p>
+          <strong>Liam S.</strong>
+          <span>CTO, QuantumPulse</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-panel" id="contact">
+      <div class="contact-copy">
+        <h2>Ready to ship your AI startup landing page?</h2>
+        <p>Book a build session, launch a cyberpunk identity, and convert more early adopters.</p>
+      </div>
+      <a href="mailto:hello@cyborgai.studio" class="btn btn-primary">Contact the Team</a>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
